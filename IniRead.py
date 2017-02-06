@@ -1,10 +1,10 @@
 #!python3
 #encoding:utf-8
-import configparser
-config = configparser.ConfigParser()
+from configparser import ConfigParser, ExtendedInterpolation
+config = ConfigParser(interpolation=ExtendedInterpolation())
 config.read('./git_up.ini')
 print(config['GitHub']['Username'])
 print(config['SQLite']['Apis'])
 print(config['SQLite']['Accounts'])
-print(config['sqlite']['repositories'])
+print(config['SQLite']['Repositories'])
 
